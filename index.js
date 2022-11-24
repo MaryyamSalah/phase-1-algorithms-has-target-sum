@@ -1,5 +1,15 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+const targetarray = []
+  for (let i =0 ; i<array.length ; i++){
+    const currentArray = array[i]
+
+    if (targetarray.includes(target-currentArray)){
+      return true
+    }
+    targetarray.push(currentArray)
+  }
+  return false
 }
 
 /* 
@@ -8,10 +18,17 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  -create empty array for the new array
+  -for loop for iterate each element of array
+  -return current array
+  -if target minus current array includes array retuen true
+  -push current array if not includes the target return false
 */
 
 /*
   Add written explanation of your solution here
+  creating new array for setting the new elements , then returning the current value ,setting if statement 
+  if the target minus current element includes the new array return true otherwise return false 
 */
 
 // You can run `node index.js` to view these console logs
